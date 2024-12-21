@@ -2,7 +2,6 @@ import { gql, useQuery } from '@apollo/client';
 
 const GET_HELLO_AND_USER = gql`
   query GetHelloAndUser($id: ID!) {
-    Dog
     getUser(id: $id) {
       id
       name
@@ -21,7 +20,6 @@ export default function Home() {
 
   return (
     <div>
-      <h1>{data.dog}</h1>
       <h2>User Details</h2>
       <p>Name: {data.getUser.name}</p>
       <p>Email: {data.getUser.email}</p>
